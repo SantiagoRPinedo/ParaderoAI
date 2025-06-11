@@ -1,0 +1,41 @@
+# Entornos virtuales
+.venv/
+venv/
+
+# Configuración sensible
+.env
+config.py
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Archivos de log
+*.log
+
+# Archivos temporales
+*.tmp
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Compilación y distribución
+build/
+dist/
+*.egg-info/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/config.toml

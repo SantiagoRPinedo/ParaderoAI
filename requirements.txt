@@ -1,0 +1,8 @@
+streamlit
+openai
+python-dotenv
+gradio
+textblob
+requests
+beautifulsoup4
+pandas
