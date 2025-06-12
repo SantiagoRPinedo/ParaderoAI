@@ -31,7 +31,6 @@ class DataIngestion:
             print(f"Error al cargar datos simulados de leads: {e}")
             return []
 
-    # Puedes añadir más métodos aquí para simular la ingesta de PMS, POS, HRIS, etc.
     def get_simulated_hr_data(self):
         """Simula obtener datos de un sistema HRIS."""
         return {

@@ -11,8 +11,8 @@ class GMCopilot:
             "Mantén un tono profesional, conciso y de alto nivel. Siempre prioriza la experiencia del huésped "
             "y la eficiencia operativa. Cuando sea posible, sugiere acciones concretas."
         )
+        # Aquí se carga más conocimiento, como plantillas de moral, etc.
         self.sops = self._load_sops_from_file("data/knowledge_base/sop_hospitality_tone.txt")
-        # Aquí puedes cargar más conocimiento, como plantillas de moral, etc.
         self.morale_templates = self._load_json_data("data/knowledge_base/team_morale_templates.json")
 
 
@@ -39,8 +39,8 @@ class GMCopilot:
         Genera una recomendación para el GM basada en su pregunta, los SOPs
         y la inteligencia del LLM.
         """
-        # Aquí puedes implementar una lógica simple para "aterrizar" la pregunta
-        # con información relevante de tus SOPs o base de conocimiento (simulando RAG)
+        # lógica simple para "aterrizar" la pregunta
+        # con información relevante de tus los SOPs o base de conocimiento (simulando RAG)
         context_info = ""
         if "moral" in gm_question.lower() or "equipo" in gm_question.lower():
             context_info = f"\nConsidera estos principios sobre la moral del equipo de Paradero:\n{self.morale_templates.get('general_morale_principles', '')}"

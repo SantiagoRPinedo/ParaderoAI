@@ -6,7 +6,7 @@ import os
 # módulos del proyecto
 from src.core.llm_handler import LLMHandler
 from src.copilot.gm_copilot import GMCopilot
-from src.agents.sales_activator import SalesActivatorAgent # Asegúrate de que exista este archivo y clase
+from src.agents.sales_activator import SalesActivatorAgent 
 
 # --- Configuración de la página de Streamlit ---
 st.set_page_config(page_title="Paradero AI - Centro de Operaciones", layout="wide", initial_sidebar_state="expanded")
@@ -39,7 +39,7 @@ def load_company_data():
 
 def save_company_data(data):
     """Guarda los datos de empresas enriquecidas en un archivo JSON."""
-    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True) # Asegura que el directorio exista
+    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True) 
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
@@ -150,7 +150,7 @@ elif page_selection == "📈 Agente SalesActivator":
         except Exception as e:
             st.error(f"Error al leer el CSV o durante el procesamiento: {e}")
 
-    st.subheader("3. Estado de Empresas MICE y Secuencias de Contacto") # El número de subsección ha cambiado a 3.
+    st.subheader("3. Estado de Empresas MICE y Secuencias de Contacto") # El número de subsección 3.
     # Muestra las empresas procesadas por el agente
     companies = load_company_data()
     if companies:
